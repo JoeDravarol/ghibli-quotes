@@ -3,3 +3,84 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  color: #1f2937;
+  line-height: 1.5;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  margin-block: 5em;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: monospace;
+  margin-bottom: 0.25em;
+}
+
+header p {
+  font-size: 1.25rem;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+}
+
+pre {
+  background-color: #282c34;
+  width: 880px;
+  border-radius: 5px;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+code {
+  font-family: monospace;
+  font-size: 1rem;
+  color: #fff;
+}
+
+button {
+  background: rgb(16, 185, 129);
+  color: #fff;
+  padding: 1em;
+  border-radius: 5px;
+  border-color: transparent;
+  outline: none;
+
+  cursor: pointer;
+  width: fit-content;
+}
+
+.function {
+  color: rgb(121, 182, 242);
+}
+
+.string {
+  color: rgb(141, 200, 145);
+}
+
+.object {
+  color: rgb(250, 200, 99);
+}
+
+.container:first-child {
+  margin-bottom: 2em;
+}
+
+.title {
+  border-bottom: 1px dashed rgb(16, 185, 129);
+  width: fit-content;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}

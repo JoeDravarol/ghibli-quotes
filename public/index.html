@@ -7,10 +7,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="main.css">
   <title>Studio Ghibli Quotes API</title>
+  <script src="index.js" defer></script>
 </head>
 
 <body>
-  <h1>Studio Ghibli quotes API</h1>
+  <header>
+    <h1>Ghibli Quotes</h1>
+    <p>A free restful API serving quality quotes from Studio Ghibli's film</p>
+  </header>
+
+  <main>
+    <section class="container flow">
+      <h2>Try it</h2>
+      <p class="title">Run this code to get a random quote</p>
+
+      <pre>
+      <code class="language-javascript">
+        <span class="function">fetch</span>(<span class="string">'https://ghibli-quotes.herokuapp.com/api/random'</span>)
+          <span class="function">.then</span>(response => response<span class="function">.json</span>())
+          <span class="function">.then</span>(quote => <span class="object">console</span><span class="function">.log</span>(quote))
+      </code>
+      </pre>
+
+      <button id="random-quote" type="button">Run script</button>
+
+      <pre>
+      <code id="random-quote-response">
+        {}
+      </code>
+      </pre>
+    </section>
+
+    <section class="container flow">
+      <h2 class="title">Get all quotes</h2>
+
+      <pre>
+      <code class="language-javascript">
+        <span class="function">fetch</span>(<span class="string">'https://ghibli-quotes.herokuapp.com/api/quotes'</span>)
+          <span class="function">.then</span>(response => response<span class="function">.json</span>())
+          <span class="function">.then</span>(quotes => <span class="object">console</span><span class="function">.log</span>(quotes))
+      </code>
+      </pre>
+
+      <span>Output</span>
+
+      <pre>
+      <code>
+        [<span class="string">{</span> film: <span class="string">"...",</span> quote: <span class="string">"..."},</span> ...]
+      </code>
+      </pre>
+    </section>
+
+  </main>
+
 </body>
 
 </html>
