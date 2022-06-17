@@ -1,9 +1,11 @@
 const express = require('express');
+const cors = require('cors')
+const { quotes } = require('./data.js')
 const app = express();
 
-const { quotes } = require('./data.js')
 const PORT = process.env.PORT || 8000;
 
+app.use(cors())
 app.use(express.static('public'))
 
 app.get('/api/random', (req, res) => {
