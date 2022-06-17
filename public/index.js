@@ -5,7 +5,7 @@ randomQuoteBtn.addEventListener('click', fetchRandomQuote)
 
 async function fetchRandomQuote() {
   try {
-    const response = await fetch('http://ghibli-quotes.herokuapp.com/api/random');
+    const response = await fetch('https://ghibli-quotes.herokuapp.com/api/random');
     const { film, quote } = await response.json();
 
     randomQuoteResponse.innerHTML = `
