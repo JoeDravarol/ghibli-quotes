@@ -8,15 +8,16 @@ body {
   color: #1f2937;
   line-height: 1.5;
   font-family: Roboto, Helvetica, Arial, sans-serif;
+  padding-inline: 1em;
 }
 
 header {
   text-align: center;
-  margin-block: 5em;
+  margin-block: 3em;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: clamp(1rem, 1.5rem + 1vw, 3rem);
   font-family: monospace;
   margin-bottom: 0.25em;
 }
@@ -28,14 +29,24 @@ header p {
 main {
   display: grid;
   justify-content: center;
+  padding-bottom: 2em;
 }
 
 pre {
   background-color: #282c34;
-  width: 880px;
+  max-width: 100%;
+  padding-inline: 5vw;
   border-radius: 5px;
   text-align: left;
-  white-space: pre-wrap;
+  white-space: pre-line;
+}
+
+@media only screen and (min-width: 1240px) {
+  pre {
+    width: 880px;
+    white-space: pre-wrap;
+    padding-inline: initial;
+  }
 }
 
 code {
